@@ -25,8 +25,9 @@ type HelmChartInfo struct {
 }
 
 type ImageLocation struct {
-	Origin string
-	Path   string
+	Origin     string
+	Path       string
+	FinalStage bool
 }
 
 const (
@@ -55,8 +56,9 @@ func ToImageModels(images []string) []ImageModel {
 			Name: image,
 			ImageLocations: []ImageLocation{
 				{
-					Origin: UserInput,
-					Path:   NoFilePath,
+					Origin:     UserInput,
+					Path:       NoFilePath,
+					FinalStage: false,
 				},
 			},
 		})
