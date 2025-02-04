@@ -17,8 +17,8 @@ jobs:
 
       - name: Git auth config
         run: | 
-          git config --global user.email "cx-ast-ci@checkmarx.com"
-          git config --global user.name "cxAST CI"
+          git config --local user.email "cx-ast-ci@checkmarx.com"
+          git config --local user.name "cxAST CI"
 
       - name: Get and Format the PR Title
         id: get_pr_title
