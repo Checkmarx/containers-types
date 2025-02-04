@@ -16,7 +16,9 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
       - name: Git auth config
-        run: git config --local user.email "cx-ast-ci@checkmarx.com"
+        run: | 
+          git config --global user.email "cx-ast-ci@checkmarx.com"
+          git config --global user.name "cxAST CI"
 
       - name: Get and Format the PR Title
         id: get_pr_title
