@@ -46,6 +46,8 @@ jobs:
 
       - name: Create a new tag
         run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
           new_tag=${{ steps.bump.outputs.new_version }}
           git tag $new_tag -m "${{ env.formatted_title }}"
           git push origin $new_tag
@@ -60,3 +62,9 @@ jobs:
           body: ${{ steps.get_pr_title.outputs.pr_title }}
           draft: false
           prerelease: false
+
+            - name:
+                Configure GitHub authentication and Clone  env:
+                  GITHUB_TOKEN:
+                    ${{ secrets.GH_TOKEN }}
+                    run: |    git config --global url."https://$GITHUB_TOKEN:@github.com/".insteadOf "https://github.com/"    git clone --branch master https://github.com/CheckmarxDev/ast-system-tests.git
