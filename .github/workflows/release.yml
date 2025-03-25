@@ -62,9 +62,3 @@ jobs:
           body: ${{ steps.get_pr_title.outputs.pr_title }}
           draft: false
           prerelease: false
-
-            - name:
-                Configure GitHub authentication and Clone  env:
-                  GITHUB_TOKEN:
-                    ${{ secrets.GH_TOKEN }}
-                    run: |    git config --global url."https://$GITHUB_TOKEN:@github.com/".insteadOf "https://github.com/"    git clone --branch master https://github.com/CheckmarxDev/ast-system-tests.git
