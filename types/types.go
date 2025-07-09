@@ -28,6 +28,9 @@ type ImageLocation struct {
 	Origin     string
 	Path       string
 	FinalStage bool
+	Line       int
+	StartIndex int
+	EndIndex   bool
 }
 
 const (
