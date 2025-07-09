@@ -30,7 +30,7 @@ type ImageLocation struct {
 	FinalStage bool
 	Line       int
 	StartIndex int
-	EndIndex   bool
+	EndIndex   int
 }
 
 const (
