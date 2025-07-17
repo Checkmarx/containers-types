@@ -16,6 +16,7 @@ type FilePath struct {
 type ImageModel struct {
 	Name           string
 	ImageLocations []ImageLocation
+	IsSha          bool
 }
 
 type HelmChartInfo struct {
