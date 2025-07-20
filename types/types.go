@@ -39,7 +39,7 @@ const (
 	DockerFileOrigin        = "Dockerfile"
 	DockerComposeFileOrigin = "DockerCompose"
 	HelmFileOrigin          = "Helm"
-	NoFilePath              = "NONE"
+	CustomImages            = "Custom Images"
 )
 
 type Microservice struct {
@@ -61,7 +61,7 @@ func ToImageModels(images []string) []ImageModel {
 			ImageLocations: []ImageLocation{
 				{
 					Origin:     UserInput,
-					Path:       NoFilePath,
+					Path:       CustomImages,
 					FinalStage: false,
 				},
 			},
