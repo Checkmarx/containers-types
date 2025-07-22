@@ -40,6 +40,7 @@ const (
 	DockerComposeFileOrigin = "DockerCompose"
 	HelmFileOrigin          = "Helm"
 	CustomImages            = "Custom Images"
+	NoFilePath              = "NONE"
 )
 
 type Microservice struct {
